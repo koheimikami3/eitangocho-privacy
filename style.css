@@ -1,0 +1,173 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f7f7f8;
+  --text: #1d1d1f;
+  --text-muted: rgba(0, 0, 0, 0.6);
+  --border: rgba(0, 0, 0, 0.1);
+  --accent: #429ff0;
+  --accent-hover: #2b8ee0;
+  --max-width: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1e;
+    --surface: #2a2a2c;
+    --text: #f2f2f5;
+    --text-muted: rgba(255, 255, 255, 0.65);
+    --border: rgba(255, 255, 255, 0.14);
+    --accent: #4ea6f2;
+    --accent-hover: #6bb6f5;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0 20px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  line-height: 1.8;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+
+header.site-header .app-name {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 4px;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 40px 0 12px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 24px 0 8px;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+ul {
+  margin: 0 0 16px;
+  padding-left: 1.4em;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.updated {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.note {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+
+.note p:last-child {
+  margin-bottom: 0;
+}
+
+.cards {
+  display: grid;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.card {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.card .card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.card .card-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 56px;
+  padding-top: 24px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+footer.site-footer a {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
